@@ -14,7 +14,8 @@ unit = sys.argv[4]
 if sweep_type == 'h':
 	ref_meas = False
 scan_type = (sweep_type, ref_meas)
-input_file = vna.out_path + input_file
+#input_file = vna.out_path + input_file
+print(input_file)
 
 data = np.genfromtxt(input_file, skip_header=1)
 s11 = vna.SParameter(data, type=(1, 1), scan_type=scan_type, unit=unit)

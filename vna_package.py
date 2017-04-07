@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-out_path = r'D:\Documents\Measurements\VNA\2017'
+#out_path = r'D:\Documents\Measurements\VNA\2017'
 
 #-------------------- CLASS Definition --------------------
 
