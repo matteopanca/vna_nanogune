@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 
+# plt.close('all')
+
 #----- INPUT ARGS. -----
 input_file = sys.argv[1]
 sweep_type = sys.argv[2]
@@ -23,7 +25,7 @@ s22 = vna.SParameter(data, type=(2, 2), scan_type=scan_type, unit=unit)
 
 #Plots
 to_plot = 'an'
-xAxis_type = 'i'
+xAxis_type = 'h'
 ax1 = []
 fig1 = plt.figure(figsize=(16,9))
 ax1.append(fig1.add_subplot(2,2,1))
@@ -37,7 +39,7 @@ s22.plot(ax1[3], to_plot, xAxis_type)
 fig1.tight_layout()
 
 to_plot = 'ad'
-xAxis_type = 'i'
+xAxis_type = 'h'
 ax3 = []
 fig3 = plt.figure(figsize=(16,9))
 ax3.append(fig3.add_subplot(2,2,1))
@@ -50,9 +52,9 @@ ax3.append(fig3.add_subplot(2,2,4))
 s22.plot(ax3[3], to_plot, xAxis_type)
 fig3.tight_layout()
 
-needed = False
+needed = True
 if needed:
-	to_plot = 'ad'
+	to_plot = 'an'
 	slice_type = 'f'
 	plot_each = 5
 	ax2 = []
