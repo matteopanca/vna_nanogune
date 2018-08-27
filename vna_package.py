@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 import tkinter as tk
 from tkinter import filedialog
 
-#out_path = r'D:\Documents\Measurements\VNA\2017'
-
 #-------------------- CLASS Definition --------------------
 
 class SParameter:
