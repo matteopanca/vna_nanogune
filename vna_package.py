@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import tkinter as tk
-from tkinter import filedialog
 
 #-------------------- CLASS Definition --------------------
 
@@ -192,9 +190,3 @@ def fmr_kittel(h, m, n, unit='Oe'):
 		return []
 	kittel_freq = mu0*gamma*np.real(np.sqrt((h_conv + (n[0] - n[2])*m)*(h_conv + (n[1] - n[2])*m)))
 	return kittel_freq
-
-#Get the selected file's path in a string
-def get_path(start_path='', filter=(('TXT files', '*.txt'), ('All files', '*'))):
-	root = tk.Tk() #hide the root window
-	root.withdraw() #hide the root window
-	return filedialog.askopenfilename(initialdir=start_path, title='Select input file', filetypes=filter)
